@@ -1,78 +1,41 @@
-/* ======================================
-   styles.css - Task 1: Flexbox Layout
-   ====================================== */
+/* ==========================================
+   styles.css - Task 3: Full Styling + Beauty
+   ========================================== */
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    flex: auto;
-}
-
-article {
-    flex: 2;
-    overflow-y: auto;
-    background: white;
+header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 20px 20px;
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 }
 
-aside {
-    flex: 1;
-    overflow-y: auto;
-    background: #ecf0f1;
-    padding: 2rem;
-    border-radius: 10px;
+.logo {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Optional polish */
-main {
-    gap: 2rem;
-    padding: 2rem;
-}
-/* ======================================
-   TASK 2: Responsive Design
-   Mobile-first & smartphone-friendly
-   ====================================== */
-
-.works_on_smartphone main {
-    flex-direction: column;
+header h1 {
+    font-size: 2.8rem;
+    margin: 0.5rem 0;
+    font-weight: 700;
 }
 
-.works_on_smartphone article,
-.works_on_smartphone aside {
-    flex: 1;
-    min-width: 100%;
-}
-
-/* Extra polish for small screens */
-@media (max-width: 768px) {
-    header, footer {
-        padding: 1.5rem;
-    }
-    
-    main {
-        padding: 1rem;
-        gap: 1rem;
-    }
-    
-    article, aside {
-        border-radius: 8px;
-    }
-}/* ======================================
-   styles.css - Task 1 + Task 2 (Responsive)
-   ====================================== */
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+header p {
+    font-size: 1.3rem;
+    opacity: 0.9;
 }
 
 main {
@@ -81,41 +44,71 @@ main {
     flex: auto;
     gap: 2rem;
     padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-article {
-    flex: 2;
-    overflow-y: auto;
+article, aside {
     background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-aside {
-    flex: 1;
-    overflow-y: auto;
-    background: #ecf0f1;
-    padding: 2rem;
-    border-radius: 10px;
+article:hover, aside:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
-/* ======================================
-   TASK 2: RESPONSIVE – works_on_smartphone
-   ====================================== */
+article h2, aside h3 {
+    color: #764ba2;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 0.5rem;
+}
 
+article ul, aside ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+article li, aside li {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+}
+
+article a, aside a {
+    color: #667eea;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+article a:hover, aside a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+footer {
+    background: rgba(0,0,0,0.8);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    margin-top: auto;
+}
+
+/* RESPONSIVE – works_on_smartphone */
 .works_on_smartphone main {
     flex-direction: column;
+    padding: 1rem;
 }
 
 .works_on_smartphone article,
 .works_on_smartphone aside {
     flex: 1;
     min-width: 100%;
-}
-
-@media (max-width: 768px) {
-    header, footer { padding: 1.5rem; }
-    main { padding: 1rem; gap: 1rem; }
-    article, aside { border-radius: 8px; }
 }
