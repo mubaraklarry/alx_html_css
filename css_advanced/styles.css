@@ -144,7 +144,109 @@ body {
     background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
     text-align: center;
 }
+/* ==========================================
+   FAQ SECTION - Task 6
+   ========================================== */
 
+.faq {
+    padding: 120px 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.faq .section-subtitle {
+    font-size: 1.3rem;
+    color: #777;
+    margin-bottom: 70px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faq-item {
+    background: #f8f9fa;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.faq-item:hover {
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.faq-question {
+    padding: 24px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.faq-question h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.faq-toggle {
+    font-size: 2rem;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-item.active .faq-question {
+    background: #3498db;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background: white;
+}
+
+.faq-answer p {
+    padding: 0 30px;
+    margin: 0;
+    color: #444;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 30px;
+}
+
+.faq-answer a {
+    color: #3498db;
+    font-weight: 600;
+}
+
+/* JavaScript will add .active class on click */
 .membership h2 {
     font-size: 2.8rem;
     font-weight: 700;
