@@ -36,3 +36,86 @@ main {
     gap: 2rem;
     padding: 2rem;
 }
+/* ======================================
+   TASK 2: Responsive Design
+   Mobile-first & smartphone-friendly
+   ====================================== */
+
+.works_on_smartphone main {
+    flex-direction: column;
+}
+
+.works_on_smartphone article,
+.works_on_smartphone aside {
+    flex: 1;
+    min-width: 100%;
+}
+
+/* Extra polish for small screens */
+@media (max-width: 768px) {
+    header, footer {
+        padding: 1.5rem;
+    }
+    
+    main {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    article, aside {
+        border-radius: 8px;
+    }
+}/* ======================================
+   styles.css - Task 1 + Task 2 (Responsive)
+   ====================================== */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+article {
+    flex: 2;
+    overflow-y: auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+aside {
+    flex: 1;
+    overflow-y: auto;
+    background: #ecf0f1;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* ======================================
+   TASK 2: RESPONSIVE – works_on_smartphone
+   ====================================== */
+
+.works_on_smartphone main {
+    flex-direction: column;
+}
+
+.works_on_smartphone article,
+.works_on_smartphone aside {
+    flex: 1;
+    min-width: 100%;
+}
+
+@media (max-width: 768px) {
+    header, footer { padding: 1.5rem; }
+    main { padding: 1rem; gap: 1rem; }
+    article, aside { border-radius: 8px; }
+}
